@@ -21,13 +21,15 @@ int main ( ) {
 	    	t = a[i] - x;
 	    	if ( t > max) {
 	    		max = t;
-	    		socantim= a[i]; 
+	    		if ( socantim < a[i]) {
+	    		socantim= a[i]; } 
 				vt = i;}
 			} else {
 				t = x - a[i] ;
 				if ( t > max) {
 	    		max = t;
-	    		socantim= a[i]; 
+	    			if ( socantim < a[i]) {
+	    		socantim= a[i]; } 
 				vt = i;}
 		}
  

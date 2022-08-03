@@ -27,12 +27,14 @@ int main ( ) {
 	    	t = a[i] - x;
 	    	if ( t <= min) {
 	    		min = t;
-	    		socantim= a[i]; 
+	    		if ( socantim >= a[i]) {
+	    		socantim= a[i]; }
 				vt = i;}
 			} else {
 				t = x - a[i] ;
 				if ( t <= min ) {
 	    		min = t;
+	    		if ( socantim >= a[i]) {
 	    		socantim= a[i]; 
 				vt = i;}
 		}
