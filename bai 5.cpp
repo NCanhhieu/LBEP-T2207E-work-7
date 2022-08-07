@@ -1,25 +1,34 @@
 #include <stdio.h>
 
 int main ( ) {
-	printf ( " nhap n nguyen :  \n") ;	
+	printf ( " nhap n nguyen duong :  \n") ;	
 	int n;
-	scanf("%d", &n);
+	do {
+		scanf("%d", &n);
+		if ( n<= 0) { printf(" n phai nguyen duong, nhap lai \n");
+		}
+	} while ( n<= 0);
+	
 	int a[n];
-	int b[n];
+	int i=0;
+	int x,j;
 	printf (" nhap mang a:  \n");
-	scanf("%d", &a[0]);
-	for (int i = 1; i < n; i++) {
-	  for ( int j = i - 1; j >= 0; j--) {
-	  	 do  {
-	  	 	scanf("%d", &a[i]);
-	  	 	if (a[i] == a[j]) {
-	  	 		printf (" nhap lai \n");
-	  	 		}else { break;
-				   }
-			} while (a[i] == a[j]);
-			break;
-		   }
-	  }
-
+    while ( i < n) {
+    	scanf("%d",&x);
+    	bool t = false;
+    	for (j = 0; j < i ; j++) {
+    	if ( x == a[j]) {
+    		t = true;
+    		break;  } }
+    	if ( t)	 { printf (" %d bi trung, nhap lai \n", x);
+		} else {
+    			a[i] = x;
+    			i++;
+		}
+	}
+	printf ( " mang da nhap la : \n");
+	for ( int k = 0; k < n; k++) {
+		printf("%d", a[k]);
+	} printf ("\t");
 return 0;
 }
